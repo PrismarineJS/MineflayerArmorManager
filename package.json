@@ -1,0 +1,32 @@
+{
+  "name": "mineflayer-armor-manager",
+  "version": "0.0.1",
+  "description": "Manage armor automatically with various configs",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G07cha/MineflayerArmorManager.git"
+  },
+  "keywords": [
+    "mineflayer",
+    "minecraft",
+    "armor"
+  ],
+  "author": "G07cha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/G07cha/MineflayerArmorManager/issues"
+  },
+  "homepage": "https://github.com/G07cha/MineflayerArmorManager#readme",
+  "devDependencies": {
+    "minecraft-protocol": "^0.16.6",
+    "mineflayer": "^1.6.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "minecraft-data": "^0.19.1"
+  }
+}
