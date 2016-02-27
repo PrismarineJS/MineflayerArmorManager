@@ -1,7 +1,7 @@
 var assert = require('assert');
 var equipItem = require('../lib/equipItem');
 
-describe('Equip item', function() {
+describe('Equip item(integration)', function() {
   var bot;
 
   beforeEach(function() {
@@ -16,7 +16,7 @@ describe('Equip item', function() {
           {
             type: 1
           },
-          null
+          null, null, null, null, null
         ]
       },
     };
