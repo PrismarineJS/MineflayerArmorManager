@@ -10,12 +10,18 @@ module.exports = function(bot, config) {
   var mcData = minecraftData(config.version || "1.8.8");
 
   bot.on('playerCollect', function(collector, item) {
-    var itemId = item.metadata['10'].blockId;
-    if(collector.username === bot.username && isArmor(itemId)) {
-      // Little delay to receive inventory
-      setTimeout(function() {
-        equipItem(bot, itemId);
-      }, 100);
+    try {
+      var itemId = item.metadata['10'].blockId;
+      if(collector.username === bot.username && isArmor(itemId)) {
+        // Little delay to receive inventory
+        setTimeout(function() {
+          equipItem(bot, itemId);
+        }, 100);
+      }
+    } catch(err) {
+      if(config.logging) {
+        console.log('Failed to retrive block id, probably exp bottle');
+      }
     }
   });
 };
