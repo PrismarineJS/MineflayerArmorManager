@@ -2,6 +2,8 @@
 
 Extend mineflayer's bot with ability to automatically equip better armor(can be configured).
 
+![Footage should be here](/footage.gif)
+
 ## Install
 
 ### As dependency
@@ -21,7 +23,8 @@ npm test
 ```javascript
 var mineflayer = require('mineflayer');
 var bot = mineflayer.createBot({
-  host: "localhost"
+  username: 'Player'
+  host: 'localhost'
   port: 25565
 });
 
