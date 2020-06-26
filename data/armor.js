@@ -1,10 +1,11 @@
 module.exports = {
-  ids: {
-    lether: 298,
-    golden: 314,
-    iron: 306,
-    chainmail: 302,
-    diamond: 310
+  /** Mapping of values of which kind of armor goes to which slot */
+  typeDestinationMap: {
+    'helmet': 'head',
+    'chestplate': 'torso',
+    'leggings': 'legs',
+    'boots': 'feet'
   },
-  destinations: ['head', 'torso', 'legs', 'feet']
+  /** Ranked list of armor materials from worst to best */
+  materials: ['leather', 'golden', 'iron', 'chainmail', 'turtle', 'diamond']
 };
