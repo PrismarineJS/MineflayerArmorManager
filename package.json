@@ -1,10 +1,9 @@
 {
   "name": "mineflayer-armor-manager",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Manage armor automatically with various configs",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/G07cha/MineflayerArmorManager.git"
