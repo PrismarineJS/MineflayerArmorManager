@@ -6,13 +6,23 @@ Extend mineflayer's bot with ability to automatically equip better armor(can be 
 
 ## Install
 
+### Prerequisites
+
+- NodeJS 12.18 or higher
+
 ### As dependency
 
-`npm i mineflayer-armor-manager`
+If using NPM:
+
+`npm install mineflayer-armor-manager`
+
+If using yarn:
+
+`yarn add mineflayer-armor-manager`
 
 ### As development version
 
-```
+```bash
 git clone https://github.com/G07cha/MineflayerArmorManager.git
 npm install
 npm test
@@ -23,8 +33,8 @@ npm test
 ```javascript
 var mineflayer = require('mineflayer');
 var bot = mineflayer.createBot({
-  username: 'Player'
-  host: 'localhost'
+  username: 'Player',
+  host: 'localhost',
   port: 25565
 });
 
