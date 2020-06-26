@@ -4,7 +4,6 @@
   "description": "Manage armor automatically with various configs",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -20,13 +19,18 @@
   "bugs": {
     "url": "https://github.com/G07cha/MineflayerArmorManager/issues"
   },
+  "engines": {
+    "node": ">=12.18"
+  },
   "homepage": "https://github.com/G07cha/MineflayerArmorManager#readme",
   "devDependencies": {
-    "minecraft-protocol": "^0.16.6",
-    "mineflayer": "^1.6.0",
-    "mocha": "^2.4.5"
+    "mineflayer": "^2.22.0",
+    "mocha": "^8.0.1"
+  },
+  "peerDependencies": {
+    "mineflayer": "^2.22.0"
   },
   "dependencies": {
-    "minecraft-data": "^0.19.1"
+    "minecraft-data": "^2.58.0"
   }
 }
