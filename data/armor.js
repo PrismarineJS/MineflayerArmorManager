@@ -1,10 +1,10 @@
 module.exports = {
   ids: {
-    lether: 298,
-    golden: 314,
-    iron: 306,
-    chainmail: 302,
-    diamond: 310
+    lether: 563,
+    golden: 579,
+    iron: 571,
+    chainmail: 567,
+    diamond: 575
   },
   destinations: ['head', 'torso', 'legs', 'feet']
 };

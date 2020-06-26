@@ -11,7 +11,7 @@ module.exports = function(bot, config) {
 
   bot.on('playerCollect', function(collector, item) {
     try {
-      var itemId = item.metadata['10'].blockId;
+      var itemId = item.metadata['7'].itemId;
       if(collector.username === bot.username && isArmor(itemId)) {
         // Little delay to receive inventory
         setTimeout(function() {
