@@ -1,9 +1,9 @@
-var mineflayer = require('mineflayer');
-var bot = mineflayer.createBot({
+const mineflayer = require('mineflayer');
+const bot = mineflayer.createBot({
   username: 'Player',
   host: 'localhost',
   port: 25565
 });
 
 // Simplest variant
-require('.')(bot);
+bot.loadPlugin(require('./dist'))

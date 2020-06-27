@@ -1,16 +1,15 @@
-var invUtil = require('./invUtil');
+import * as invUtil from './invUtil'
+import { Bot } from 'mineflayer';
 
 /**
- * Search for item in provided bot's inventory and equip it
- * @param  {Object} bot    mineflayer's bot
- * @param  {Number} itemId Picked up item id
- * @return {Boolean}   true if item equipped succesfully, false if something went wrong
+ * Search for item in bot's inventory and equips it
+ * @return {Boolean}   true if item equipped successfully, false if something went wrong
  */
-module.exports = function(bot, itemId) {
+export const equipItem = (bot: Bot, itemId: number): boolean => {
   if(itemId === undefined) {
     throw new Error('Item id is missing, provide item id as second argument');
   }
-  var item = invUtil.findItem(bot.inventory, itemId);
+  var item = invUtil.findItemById(bot.inventory, itemId);
   var equipped = invUtil.equipped(bot.inventory);
 
   if(!item) {
@@ -25,7 +24,7 @@ module.exports = function(bot, itemId) {
   }
 
   const equippedArmor = equipped[destinationIndex];
-  if(!equippedArmor || invUtil.compareArmor(item, equippedArmor)) {
+  if(!equippedArmor || invUtil.isNewArmorBetter(equippedArmor, item)) {
     bot.equip(item, destination);
     return true;
   }
