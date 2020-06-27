@@ -2,8 +2,12 @@
   "name": "mineflayer-armor-manager",
   "version": "1.0.0",
   "description": "Manage armor automatically with various configs",
-  "main": "index.js",
-  "scripts": {},
+  "main": "./dist/index.js",
+  "scripts": {
+    "clear": "rm -r ./dist",
+    "build": "yarn clear && tsc",
+    "test:types": "tsc --noEmit"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/G07cha/MineflayerArmorManager.git"
@@ -24,12 +28,16 @@
   "homepage": "https://github.com/G07cha/MineflayerArmorManager#readme",
   "devDependencies": {
     "mineflayer": "^2.22.0",
-    "mocha": "^8.0.1"
+    "mocha": "^8.0.1",
+    "prismarine-item": "^1.4.0",
+    "prismarine-windows": "^1.4.0",
+    "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "mineflayer": "^2.22.0"
+    "mineflayer": "^2.0.0"
   },
   "dependencies": {
-    "minecraft-data": "^2.58.0"
+    "minecraft-data": "^2.58.0",
+    "rambda": "^5.8.0"
   }
 }

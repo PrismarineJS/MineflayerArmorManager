@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Pull Node version from .nvmrc
+      run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+      id: nvm
+    - name: Use Node.js
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '${{ steps.nvm.outputs.NVMRC }}'
+    - name: Install dependencies
+      run: yarn --frozen-lockfile
+    - name: Lint TS
+      run: yarn test:types
