@@ -9,6 +9,7 @@ Extend [mineflayer's](https://github.com/PrismarineJS/mineflayer) bot with abili
 ### Prerequisites
 
 - NodeJS 12.18 or higher
+- Yarn
 
 ### As dependency
 

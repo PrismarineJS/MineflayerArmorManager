@@ -6,7 +6,8 @@
   "scripts": {
     "clear": "rm -r ./dist",
     "build": "yarn clear && tsc",
-    "test:types": "tsc --noEmit"
+    "test:types": "tsc --noEmit",
+    "format": "prettier --write ./src"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "mineflayer": "^2.22.0",
     "mocha": "^8.0.1",
+    "prettier": "^2.0.5",
     "prismarine-item": "^1.4.0",
     "prismarine-windows": "^1.4.0",
     "typescript": "^3.9.5"

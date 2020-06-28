@@ -1,4 +1,4 @@
-import MinecraftData from 'minecraft-data';
+import MinecraftData from "minecraft-data";
 
 /** Initialized instance of MCData */
-export type IndexedData = ReturnType<typeof MinecraftData>
+export type IndexedData = ReturnType<typeof MinecraftData>;
