@@ -12,7 +12,7 @@ const initializeBot: Plugin = (bot, options) => {
     );
   }
 
-  let versionData: IndexedData;
+  let versionData: IndexedData = minecraftData(bot.version);
 
   // Version is only detected after bot logs in
   bot.on("login", function onLogin() {
