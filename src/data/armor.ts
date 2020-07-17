@@ -14,4 +14,5 @@ export const materials = [
   "chainmail",
   "turtle",
   "diamond",
+  "netherite",
 ];
