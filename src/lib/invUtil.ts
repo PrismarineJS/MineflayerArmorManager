@@ -1,13 +1,14 @@
 import { TypeDestination, materials } from "../data/armor";
 import { Item } from "prismarine-item";
-import { Window } from "prismarine-windows";
 import { keys } from "rambda";
+import { Window } from "prismarine-windows";
 
 const types = keys(TypeDestination);
 
-export const findItemById = (inventory: Window, itemId: number) => {
-  return inventory.slots.find((item) => item && item.type === itemId);
-};
+export const findItemById = (
+  inventory: { slots: readonly Item[] },
+  itemId: number
+) => inventory.slots.find((item) => item && item.type === itemId);
 
 export const findArmorDestinationIndex = (item: Item) =>
   types.findIndex((type) => item.name.endsWith(type));
