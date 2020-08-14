@@ -15,11 +15,11 @@ Plugin for [MineFlayer](https://github.com/PrismarineJS/mineflayer), that makes 
 
 ### As dependency
 
-If using *NPM*:
+If using **NPM**:
 
 `npm install mineflayer-armor-manager`
 
-If using *YARN*:
+If using **YARN**:
 
 `yarn add mineflayer-armor-manager`
 
