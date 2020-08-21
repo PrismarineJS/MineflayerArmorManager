@@ -1,37 +1,31 @@
 # ArmorManager
 
-Extend [mineflayer's](https://github.com/PrismarineJS/mineflayer) bot with ability to automatically equip better armor.
+Plugin for [MineFlayer](https://github.com/PrismarineJS/mineflayer), that makes bot automatically equip better armor.
 
-![Footage should be here](/footage.gif)
+# Demonstration
 
-## Install
+![Footage](/footage.gif)
+
+## Installing
 
 ### Prerequisites
 
-- NodeJS 12.18 or higher
-- Yarn
+- NodeJS ^12.18
+- YARN (Optional)
 
 ### As dependency
 
-If using NPM:
+If using **NPM**:
 
 `npm install mineflayer-armor-manager`
 
-If using yarn:
+If using **YARN**:
 
 `yarn add mineflayer-armor-manager`
 
-### As development version
-
-```bash
-git clone https://github.com/G07cha/MineflayerArmorManager.git
-yarn install
-yarn build
-```
-
 ## Usage
 
-```javascript
+```js
 const armorManager = require('mineflayer-armor-manager')
 const mineflayer = require('mineflayer');
 
