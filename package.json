@@ -8,7 +8,7 @@
     "build": "yarn clear && tsc",
     "test:types": "tsc --noEmit",
     "format": "prettier --write ./src",
-    "prepubish": "yarn build"
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
