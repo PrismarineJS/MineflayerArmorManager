@@ -4,10 +4,11 @@
   "description": "Manage armor automatically with various configs",
   "main": "./dist/index.js",
   "scripts": {
-    "clear": "rm -r ./dist",
+    "clear": "rm -rf ./dist",
     "build": "yarn clear && tsc",
     "test:types": "tsc --noEmit",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "prepubish": "yarn build"
   },
   "repository": {
     "type": "git",
