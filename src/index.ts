@@ -23,6 +23,10 @@ const initializeBot: Plugin = (bot, options) => {
   });
 
   bot.on("playerCollect", function onPlayerCollect(collector, item) {
+    if (collector.username !== bot.username) {
+      return;
+    }
+
     try {
       const itemMetadata = item.metadata[item.metadata.length - 1] as any;
       // In older versions blockId is used instead of itemId
@@ -30,17 +34,13 @@ const initializeBot: Plugin = (bot, options) => {
         "itemId" in itemMetadata
           ? itemMetadata.itemId
           : "blockId" in itemMetadata && itemMetadata.blockId;
-      if (
-        itemId &&
-        collector.username === bot.username &&
-        isArmor(itemId, versionData)
-      ) {
+      if (itemId && isArmor(itemId, versionData)) {
         // Little delay to receive inventory
         setTimeout(() => equipItem(bot, itemId), 100);
       }
     } catch (err) {
       if (options.logErrors) {
-        console.log("Failed to retrieve block id, probably exp bottle");
+        console.log("Failed to retrieve block id, probably exp bottle", err);
       }
     }
   });
