@@ -43,10 +43,5 @@ export const isNewArmorBetter = (oldArmor: Item, newArmor: Item): boolean => {
 /**
  * Get equipped items(workaround because of https://github.com/PrismarineJS/mineflayer/issues/397)
  */
-export const equipped = (inventory: Window, supportsOffhand: boolean): readonly Item[] => {
-  let list = inventory.slots.slice(5, 9);
-
-  if (supportsOffhand) list = [...list, inventory.slots[45]];
-
-  return list;
-}
+export const equipped = (inventory: Window, supportsOffhand: boolean): readonly Item[] =>
+  inventory.slots.slice(5, 9).concat(supportsOffhand ? [inventory.slots[45]] : [])
