@@ -4,6 +4,7 @@ export enum TypeDestination {
   chestplate = "torso",
   leggings = "legs",
   boots = "feet",
+  'off-hand' = "off-hand"
 }
 
 /** Ranked list of armor materials from worst to best */
@@ -15,4 +16,10 @@ export const materials = [
   "turtle",
   "diamond",
   "netherite",
+];
+
+/** Ranked list of offhand materials from worst to best */
+export const offhandMaterials = [
+  "shield",
+  "totem_of_undying"
 ];
