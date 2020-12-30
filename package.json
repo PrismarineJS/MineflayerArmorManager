@@ -6,9 +6,8 @@
   "scripts": {
     "clear": "rm -rf ./dist",
     "build": "yarn clear && tsc",
-    "test:types": "tsc --noEmit",
-    "format": "prettier --write ./src",
-    "prepublishOnly": "yarn build"
+    "test": "tsc",
+    "format": "prettier --write ./src"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,7 @@
     "url": "https://github.com/G07cha/MineflayerArmorManager/issues"
   },
   "engines": {
-    "node": ">=12.18"
+    "node": ">=14"
   },
   "homepage": "https://github.com/G07cha/MineflayerArmorManager#readme",
   "devDependencies": {
@@ -42,5 +41,8 @@
   "dependencies": {
     "minecraft-data": "^2.65.0",
     "rambda": "^5.13.1"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
