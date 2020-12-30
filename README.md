@@ -38,6 +38,11 @@ const bot = mineflayer.createBot({
 bot.loadPlugin(armorManager);
 ```
 
+To the best possible equipment in the bot's inventory:
+```js
+bot.equipAll()
+```
+
 ## License
 
 MIT © [Konstantin Azizov](http://g07cha.github.io)
