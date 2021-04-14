@@ -41,6 +41,10 @@ const initializeBot: Plugin = (bot, options) => {
     try {
       const itemMetadata = item.metadata[item.metadata.length - 1] as any;
       // In older versions blockId is used instead of itemId
+      if (itemMetadata === 0) {
+        // itemMetadata is 0, item no longer exists or is exp. Return
+        return
+      }
       var itemId =
         "itemId" in itemMetadata
           ? itemMetadata.itemId
