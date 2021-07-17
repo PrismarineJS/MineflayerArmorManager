@@ -35,9 +35,6 @@
     "prismarine-windows": "^2.1.0",
     "typescript": "^4.0.2"
   },
-  "peerDependencies": {
-    "mineflayer": "^2.0.0"
-  },
   "dependencies": {
     "minecraft-data": "^2.65.0",
     "rambda": "^6.5.3"
