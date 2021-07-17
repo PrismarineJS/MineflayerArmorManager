@@ -38,5 +38,8 @@
   "dependencies": {
     "minecraft-data": "^2.65.0",
     "rambda": "^6.5.3"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
