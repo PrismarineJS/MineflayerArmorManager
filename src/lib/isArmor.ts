@@ -1,6 +1,5 @@
 import { TypeDestination, offhandMaterials } from "../data/armor";
 import { Item } from "prismarine-item";
-import { IndexedData } from "../types";
 
 const armorTypes = Object.keys(TypeDestination);
 
