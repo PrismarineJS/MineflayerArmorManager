@@ -38,7 +38,7 @@ const initializeBot: Plugin = (bot, options) => {
       return;
     }
     const item = collected.getDroppedItem()
-    if (item != null && isArmor(itemId, versionData)) {
+    if (item != null && isArmor(item)) {
       // Little delay to receive inventory
       setTimeout(() => equipItem(bot, itemId), 100);
     }
