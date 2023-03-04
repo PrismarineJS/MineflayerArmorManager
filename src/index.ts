@@ -33,30 +33,14 @@ const initializeBot: Plugin = (bot, options) => {
     versionData = minecraftData(bot.version);
   });
 
-  bot.on("playerCollect", function onPlayerCollect(collector, item) {
+  bot.on("playerCollect", function onPlayerCollect(collector, collected) {
     if (collector.username !== bot.username) {
       return;
     }
-
-    try {
-      const itemMetadata = item.metadata[item.metadata.length - 1] as any;
-      // In older versions blockId is used instead of itemId
-      if (itemMetadata === 0) {
-        // itemMetadata is 0, item no longer exists or is exp. Return
-        return
-      }
-      var itemId =
-        "itemId" in itemMetadata
-          ? itemMetadata.itemId
-          : "blockId" in itemMetadata && itemMetadata.blockId;
-      if (itemId && isArmor(itemId, versionData)) {
-        // Little delay to receive inventory
-        setTimeout(() => equipItem(bot, itemId), 100);
-      }
-    } catch (err) {
-      if (options.logErrors) {
-        console.log("Failed to retrieve block id, probably exp bottle", err);
-      }
+    const item = collected.getDroppedItem()
+    if (item != null && isArmor(item)) {
+      // Little delay to receive inventory
+      setTimeout(() => equipItem(bot, item.type), 100);
     }
   });
 };
