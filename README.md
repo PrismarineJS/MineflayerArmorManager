@@ -2,18 +2,9 @@
 
 Plugin for [MineFlayer](https://github.com/PrismarineJS/mineflayer), that makes bot automatically equip better armor.
 
-# Demonstration
-
 ![Footage](/footage.gif)
 
-## Installing
-
-### Prerequisites
-
-- NodeJS ^12.18
-- YARN (Optional)
-
-### As dependency
+## Getting started
 
 If using **NPM**:
 
@@ -38,12 +29,12 @@ const bot = mineflayer.createBot({
 bot.loadPlugin(armorManager);
 ```
 
-To the best possible equipment in the bot's inventory:
+If needed, it's possible to trigger a function that will check whole inventory and equip best possible armor, on spawn for example:
 
 ```js
-bot.armorManager.equipAll();
+bot.once("spawn", () => bot.armorManager.equipAll());
 ```
 
 ## License
 
-MIT © [Konstantin Azizov](http://g07cha.github.io)
+MIT © [Konstantin Azizov](https://github.com/G07cha/)
