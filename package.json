@@ -7,7 +7,7 @@
     "clear": "rm -rf ./dist",
     "build": "npm run clear && tsc",
     "test": "tsc",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./"
   },
   "repository": {
     "type": "git",

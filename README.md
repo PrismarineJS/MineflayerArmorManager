@@ -26,21 +26,22 @@ If using **YARN**:
 ## Usage
 
 ```js
-const armorManager = require('mineflayer-armor-manager')
-const mineflayer = require('mineflayer');
+const armorManager = require("mineflayer-armor-manager");
+const mineflayer = require("mineflayer");
 
 const bot = mineflayer.createBot({
-  username: 'Player',
-  host: 'localhost',
-  port: 25565
+  username: "Player",
+  host: "localhost",
+  port: 25565,
 });
 
 bot.loadPlugin(armorManager);
 ```
 
 To the best possible equipment in the bot's inventory:
+
 ```js
-bot.armorManager.equipAll()
+bot.armorManager.equipAll();
 ```
 
 ## License

@@ -14,14 +14,14 @@ const initializeBot: Plugin = (bot, options) => {
   }
 
   // @ts-expect-error
-  bot.armorManager = {}
+  bot.armorManager = {};
 
   // @ts-expect-error
   bot.armorManager.equipAll = function () {
     for (const item of bot.inventory.items()) {
-      equipItem(bot, item.type)
+      equipItem(bot, item.type);
     }
-  }
+  };
 
   let versionData: IndexedData;
   if (bot.version) {
@@ -37,7 +37,7 @@ const initializeBot: Plugin = (bot, options) => {
     if (collector.username !== bot.username) {
       return;
     }
-    const item = collected.getDroppedItem()
+    const item = collected.getDroppedItem();
     if (item != null && isArmor(item)) {
       // Little delay to receive inventory
       setTimeout(() => equipItem(bot, item.type), 100);
