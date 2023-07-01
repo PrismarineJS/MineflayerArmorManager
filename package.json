@@ -24,7 +24,7 @@
     "url": "https://github.com/G07cha/MineflayerArmorManager/issues"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "homepage": "https://github.com/G07cha/MineflayerArmorManager#readme",
   "devDependencies": {
