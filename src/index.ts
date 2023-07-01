@@ -6,7 +6,7 @@ import { equipItem } from "./lib/equipItem";
 declare module "mineflayer" {
   interface Bot {
     armorManager: {
-      equipAll: () => void;
+      equipAll: () => Promise<void>;
     };
   }
 }
@@ -19,12 +19,14 @@ const initializeBot: Plugin = (bot) => {
   }
 
   bot.armorManager = {
-    equipAll: () => {
-      bot.inventory.items().forEach((item) => equipItem(bot, item.type));
+    equipAll: async () => {
+      for (const item of bot.inventory.items()) {
+        await equipItem(bot, item.type);
+      }
     },
   };
 
-  bot.on("playerCollect", function onPlayerCollect(collector, collected) {
+  bot.on("playerCollect", (collector, collected) => {
     if (collector.username !== bot.username) {
       return;
     }

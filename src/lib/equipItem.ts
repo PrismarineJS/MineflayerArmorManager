@@ -5,11 +5,7 @@ import { Bot } from "mineflayer";
  * Search for item in bot's inventory and equips it
  * @return {Boolean}   true if item equipped successfully, false if something went wrong
  */
-export const equipItem = (bot: Bot, itemId: number): boolean => {
-  if (itemId === undefined) {
-    throw new Error("Item id is missing, provide item id as second argument");
-  }
-
+export const equipItem = async (bot: Bot, itemId: number): Promise<boolean> => {
   const item = invUtil.findItemById(bot.inventory, itemId);
   const equipped = invUtil.equipped(
     bot.inventory,
@@ -29,7 +25,7 @@ export const equipItem = (bot: Bot, itemId: number): boolean => {
 
   const equippedArmor = equipped[destinationIndex];
   if (!equippedArmor || invUtil.isNewArmorBetter(equippedArmor, item)) {
-    bot.equip(item, destination);
+    await bot.equip(item, destination);
     return true;
   }
 
