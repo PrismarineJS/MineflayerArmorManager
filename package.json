@@ -1,6 +1,6 @@
 {
   "name": "mineflayer-armor-manager",
-  "version": "1.4.2",
+  "version": "2.0.0",
   "description": "Manage armor automatically with various configs",
   "main": "./dist/index.js",
   "scripts": {
