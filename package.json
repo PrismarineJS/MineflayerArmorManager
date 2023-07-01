@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "clear": "rm -rf ./dist",
-    "build": "yarn clear && tsc",
+    "build": "npm run clear && tsc",
     "test": "tsc",
     "format": "prettier --write ./src"
   },
@@ -28,16 +28,18 @@
   },
   "homepage": "https://github.com/G07cha/MineflayerArmorManager#readme",
   "devDependencies": {
-    "mineflayer": "^4.0.0",
-    "mocha": "^9.0.0",
-    "prettier": "^2.0.5",
-    "prismarine-item": "^1.5.0",
-    "prismarine-windows": "^2.1.0",
-    "typescript": "^5.0.4"
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.8",
+    "prismarine-item": "^1.12.2",
+    "prismarine-windows": "^2.6.1",
+    "typescript": "^5.1.6"
   },
   "dependencies": {
-    "minecraft-data": "^3.0.0",
-    "rambda": "^7.0.1"
+    "minecraft-data": "^3.38.0",
+    "rambda": "^7.5.0"
+  },
+  "peerDependencies": {
+    "mineflayer": "^4.10.0"
   },
   "files": [
     "dist/**/*"
