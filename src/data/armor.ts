@@ -7,6 +7,10 @@ export enum TypeDestination {
   "off-hand" = "off-hand",
 }
 
+export const DESTINATIONS = Object.keys(
+  TypeDestination
+) as unknown as (keyof typeof TypeDestination)[];
+
 /** Ranked list of armor materials from worst to best */
 export const materials = [
   "leather",

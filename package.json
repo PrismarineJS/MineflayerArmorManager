@@ -40,8 +40,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "minecraft-data": "^3.38.0",
-    "rambda": "^7.5.0"
+    "minecraft-data": "^3.38.0"
   },
   "peerDependencies": {
     "mineflayer": "^4.10.0"

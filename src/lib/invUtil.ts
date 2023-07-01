@@ -1,9 +1,11 @@
-import { TypeDestination, materials, offhandMaterials } from "../data/armor";
+import {
+  DESTINATIONS,
+  TypeDestination,
+  materials,
+  offhandMaterials,
+} from "../data/armor";
 import { Item } from "prismarine-item";
-import { keys } from "rambda";
 import { Window } from "prismarine-windows";
-
-const types = keys(TypeDestination);
 
 export const findItemById = (
   inventory: { slots: readonly Item[] },
@@ -11,7 +13,9 @@ export const findItemById = (
 ) => inventory.slots.find((item) => item && item.type === itemId);
 
 export const findArmorDestinationIndex = (item: Item) => {
-  let index = types.findIndex((type) => item.name.endsWith(type));
+  let index = DESTINATIONS.findIndex((destination) =>
+    item.name.endsWith(destination)
+  );
 
   if (index < 0)
     index = offhandMaterials.some((mat) => item.name === mat) ? 4 : -1;
@@ -20,7 +24,9 @@ export const findArmorDestinationIndex = (item: Item) => {
 };
 
 export const findArmorDestination = (item: Item) => {
-  let type = types.find((type) => item.name.endsWith(type));
+  let type = DESTINATIONS.find((destination) =>
+    item.name.endsWith(destination)
+  );
 
   if (!type && offhandMaterials.some((mat) => item.name === mat))
     type = "off-hand";
