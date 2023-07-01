@@ -1,37 +1,28 @@
-import minecraftData from "minecraft-data";
 import { Plugin } from "mineflayer";
 
-import { IndexedData } from "./types";
 import { isArmor } from "./lib/isArmor";
 import { equipItem } from "./lib/equipItem";
-import { Item } from "prismarine-item";
 
-const initializeBot: Plugin = (bot, options) => {
+declare module "mineflayer" {
+  interface Bot {
+    armorManager: {
+      equipAll: () => void;
+    };
+  }
+}
+
+const initializeBot: Plugin = (bot) => {
   if (!bot) {
     throw new Error(
       "Bot object is missing, provide mineflayer bot as first argument"
     );
   }
 
-  // @ts-expect-error
-  bot.armorManager = {};
-
-  // @ts-expect-error
-  bot.armorManager.equipAll = function () {
-    for (const item of bot.inventory.items()) {
-      equipItem(bot, item.type);
-    }
+  bot.armorManager = {
+    equipAll: () => {
+      bot.inventory.items().forEach((item) => equipItem(bot, item.type));
+    },
   };
-
-  let versionData: IndexedData;
-  if (bot.version) {
-    versionData = minecraftData(bot.version);
-  }
-
-  // Version is only detected after bot logs in
-  bot.on("login", function onLogin() {
-    versionData = minecraftData(bot.version);
-  });
 
   bot.on("playerCollect", function onPlayerCollect(collector, collected) {
     if (collector.username !== bot.username) {

@@ -9,8 +9,9 @@ export const equipItem = (bot: Bot, itemId: number): boolean => {
   if (itemId === undefined) {
     throw new Error("Item id is missing, provide item id as second argument");
   }
-  var item = invUtil.findItemById(bot.inventory, itemId);
-  var equipped = invUtil.equipped(
+
+  const item = invUtil.findItemById(bot.inventory, itemId);
+  const equipped = invUtil.equipped(
     bot.inventory,
     !bot.supportFeature("doesntHaveOffHandSlot")
   );

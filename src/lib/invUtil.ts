@@ -36,8 +36,8 @@ const getRank = (item: Item): number => {
 };
 
 export const isNewArmorBetter = (oldArmor: Item, newArmor: Item): boolean => {
-  var oldArmorRank = getRank(oldArmor);
-  var newArmorRank = getRank(newArmor);
+  const oldArmorRank = getRank(oldArmor);
+  const newArmorRank = getRank(newArmor);
   return newArmorRank > oldArmorRank;
 };
 
