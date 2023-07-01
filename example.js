@@ -5,7 +5,6 @@ const bot = mineflayer.createBot({
   port: 25565,
 });
 
-// Simplest variant
 bot.loadPlugin(require("./dist"));
 
 bot.once("spawn", () => bot.armorManager.equipAll());
