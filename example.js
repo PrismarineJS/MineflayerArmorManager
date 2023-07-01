@@ -7,3 +7,5 @@ const bot = mineflayer.createBot({
 
 // Simplest variant
 bot.loadPlugin(require("./dist"));
+
+bot.once("spawn", () => bot.armorManager.equipAll());
