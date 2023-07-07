@@ -8,7 +8,7 @@ export enum TypeDestination {
 }
 
 export const DESTINATIONS = Object.keys(
-  TypeDestination
+  TypeDestination,
 ) as unknown as (keyof typeof TypeDestination)[];
 
 /** Ranked list of armor materials from worst to best */
