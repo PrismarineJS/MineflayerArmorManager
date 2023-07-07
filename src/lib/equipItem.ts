@@ -9,7 +9,7 @@ export const equipItem = async (bot: Bot, itemId: number): Promise<boolean> => {
   const item = invUtil.findItemById(bot.inventory, itemId);
   const equipped = invUtil.equipped(
     bot.inventory,
-    !bot.supportFeature("doesntHaveOffHandSlot")
+    !bot.supportFeature("doesntHaveOffHandSlot"),
   );
 
   if (!item) {

@@ -9,12 +9,12 @@ import { Window } from "prismarine-windows";
 
 export const findItemById = (
   inventory: { slots: readonly Item[] },
-  itemId: number
+  itemId: number,
 ) => inventory.slots.find((item) => item && item.type === itemId);
 
 export const findArmorDestinationIndex = (item: Item) => {
   let index = DESTINATIONS.findIndex((destination) =>
-    item.name.endsWith(destination)
+    item.name.endsWith(destination),
   );
 
   if (index < 0)
@@ -25,7 +25,7 @@ export const findArmorDestinationIndex = (item: Item) => {
 
 export const findArmorDestination = (item: Item) => {
   let type = DESTINATIONS.find((destination) =>
-    item.name.endsWith(destination)
+    item.name.endsWith(destination),
   );
 
   if (!type && offhandMaterials.some((mat) => item.name === mat))
@@ -52,7 +52,7 @@ export const isNewArmorBetter = (oldArmor: Item, newArmor: Item): boolean => {
  */
 export const equipped = (
   inventory: Window,
-  supportsOffhand: boolean
+  supportsOffhand: boolean,
 ): readonly Item[] =>
   inventory.slots
     .slice(5, 9)

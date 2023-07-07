@@ -14,7 +14,7 @@ declare module "mineflayer" {
 const initializeBot: Plugin = (bot) => {
   if (!bot) {
     throw new Error(
-      "Bot object is missing, provide mineflayer bot as first argument"
+      "Bot object is missing, provide mineflayer bot as first argument",
     );
   }
 
