@@ -1,3 +1,4 @@
+import { StorageEvents } from "mineflayer";
 import {
   DESTINATIONS,
   TypeDestination,
@@ -8,7 +9,7 @@ import { Item } from "prismarine-item";
 import { Window } from "prismarine-windows";
 
 export const findItemById = (
-  inventory: { slots: readonly Item[] },
+  inventory: Window<StorageEvents>,
   itemId: number,
 ) => inventory.slots.find((item) => item && item.type === itemId);
 
@@ -53,7 +54,7 @@ export const isNewArmorBetter = (oldArmor: Item, newArmor: Item): boolean => {
 export const equipped = (
   inventory: Window,
   supportsOffhand: boolean,
-): readonly Item[] =>
+): (Item | null)[] =>
   inventory.slots
     .slice(5, 9)
     .concat(supportsOffhand ? [inventory.slots[45]] : []);
