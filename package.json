@@ -33,7 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.8.0",
-    "mocha": "^10.2.0",
+    "mocha": "^11.0.1",
     "prettier": "^3.0.0",
     "prismarine-item": "^1.12.2",
     "prismarine-windows": "^2.6.1",
