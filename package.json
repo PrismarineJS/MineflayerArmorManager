@@ -32,7 +32,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "eslint": "^9.8.0",
+    "eslint": "^10.0.0",
     "mocha": "^11.0.1",
     "prettier": "^3.0.0",
     "prismarine-item": "^1.12.2",
