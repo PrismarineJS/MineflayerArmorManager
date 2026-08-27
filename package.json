@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/G07cha/MineflayerArmorManager.git"
+    "url": "git+https://github.com/PrismarineJS/MineflayerArmorManager.git"
   },
   "keywords": [
     "mineflayer",
@@ -23,12 +23,12 @@
   "author": "G07cha",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/G07cha/MineflayerArmorManager/issues"
+    "url": "https://github.com/PrismarineJS/MineflayerArmorManager/issues"
   },
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/G07cha/MineflayerArmorManager#readme",
+  "homepage": "https://github.com/PrismarineJS/MineflayerArmorManager#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
