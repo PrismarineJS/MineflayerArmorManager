@@ -37,7 +37,7 @@
     "prettier": "^3.0.0",
     "prismarine-item": "^1.12.2",
     "prismarine-windows": "^2.6.1",
-    "typescript": "^5.9.3",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.68.0"
   },
   "dependencies": {
